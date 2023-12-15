@@ -11,6 +11,7 @@ export function addItem(inputText, list) {
         <text>${inputText}</text>
         <button class="editBtn">Edit</button>
         <button class="deleteBtn">Delete</button>
+        <span class="dragBars">|||</span>
     `
     list.appendChild(li)
 }

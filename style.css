@@ -79,8 +79,14 @@ input {
 
 .editBtn {
   background-color: rgb(174, 174, 2);
+  font-size: .8rem;
 }
 
 .deleteBtn {
   background-color: rgb(156, 0, 0);
+  font-size: .8rem;
+}
+
+.dragBars{
+  font-weight: bolder;
 }

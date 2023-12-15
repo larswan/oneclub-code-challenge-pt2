@@ -1,5 +1,5 @@
 import './style.css'
-import { validateInput, addItem, deleteListItem } from './modules';
+import { validateInput, addItem, deleteListItem, editText } from './modules';
 
 document.addEventListener('DOMContentLoaded', () => {
   const editableForm = document.getElementById('editableForm');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Catch the new item after its added
   itemList.addEventListener('itemAdded', (e) => {
     const {li} = e.detail  
-    const editBtn = li.querySelector('.editBtn')
+    const textElement = li.querySelector('text')
     const deleteBtn = li.querySelector('.deleteBtn')
     
     // Delete item when button is clicked
@@ -26,7 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
       deleteListItem(li)
     })
 
-
+    // Edit text
+    textElement.addEventListener('click', ()=>{
+      editText(li)
   })
-
+  }
+  )
 })
+

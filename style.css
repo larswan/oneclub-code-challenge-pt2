@@ -76,3 +76,11 @@ input {
   background-color: rgb(255, 255, 255);
   color: black;
 }
+
+.editBtn {
+  background-color: rgb(174, 174, 2);
+}
+
+.deleteBtn {
+  background-color: rgb(156, 0, 0);
+}

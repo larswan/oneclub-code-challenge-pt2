@@ -10,7 +10,7 @@ export function addItem(inputText, list) {
     li.innerHTML = `
         <text>${inputText}</text>
         <button class="editBtn">Edit</button>
-        <button class="deleteBtn">Edit</button>
+        <button class="deleteBtn">Delete</button>
     `
     list.appendChild(li)
 }

@@ -14,4 +14,11 @@ export function addItem(inputText, list) {
         <span class="dragBars">|||</span>
     `
     list.appendChild(li)
+
+    const editBtn = li.querySelector('.editBtn')
+    const deleteBtn = li.querySelector('.deleteBtn')
+
+    deleteBtn.addEventListener('click', ()=> {
+        li.remove()
+    })
 }

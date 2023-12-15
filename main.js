@@ -10,11 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   newItemBtn.addEventListener('click', (e)=>{
     e.preventDefault()
     if(validateInput(itemNameInput.value)){
-      // add item
       addItem(itemNameInput.value, itemList)
       console.log("valid")
       editableForm.reset()
     }
-    
-  })
+  }) 
+
 })

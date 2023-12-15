@@ -8,7 +8,7 @@ export function addItem(inputText, list) {
     const li = document.createElement(`li`);
     li.innerHTML = `
         <text>${inputText}</text>
-        <button class="deleteBtn">Delete</button>
+        <button class="deleteBtn">X</button>
         <span class="dragBars">|||</span>
     `
     list.appendChild(li)

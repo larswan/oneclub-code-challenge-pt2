@@ -39,7 +39,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 3px;
   border: 1px solid transparent;
   padding: 02px 8px;
   font-size: 1em;
@@ -77,16 +77,32 @@ input {
   color: black;
 }
 
-.editBtn {
-  background-color: rgb(174, 174, 2);
-  font-size: .8rem;
-}
-
 .deleteBtn {
   background-color: rgb(156, 0, 0);
   font-size: .8rem;
+  border-radius: 3px;
 }
 
 .dragBars{
   font-weight: bolder;
+}
+
+text {
+  font-weight: 500;
+  margin-right: auto;
+}
+
+ul{
+  width: 350px;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 3px
+}
+
+li:nth-child(odd) {
+  background-color: #ccc;
 }

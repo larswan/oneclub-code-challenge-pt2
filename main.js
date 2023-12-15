@@ -1,5 +1,5 @@
 import './style.css'
-import { validateInput } from './modules';
+import { validateInput, addItem } from './modules';
 
 document.addEventListener('DOMContentLoaded', () => {
   const editableForm = document.getElementById('editableForm');
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault()
     if(validateInput(itemNameInput.value)){
       // add item
+      addItem(itemNameInput.value, itemList)
       console.log("valid")
       editableForm.reset()
     }

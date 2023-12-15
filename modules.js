@@ -4,3 +4,13 @@ export function validateInput (inputText){
         return inputText
     } else (window.alert("Invalid entry"))
 }
+
+export function addItem(inputText, list) {
+    const li = document.createElement(`li`);
+    li.innerHTML = `
+        <text>${inputText}</text>
+        <button class="editBtn">Edit</button>
+        <button class="deleteBtn">Edit</button>
+    `
+    list.appendChild(li)
+}

@@ -85,6 +85,7 @@ input {
 
 .dragBars{
   font-weight: bolder;
+  margin-right: 6px;
 }
 
 text {
@@ -100,7 +101,12 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
   padding: 3px
+}
+
+li input {
+  margin-right: auto;
 }
 
 li:nth-child(odd) {

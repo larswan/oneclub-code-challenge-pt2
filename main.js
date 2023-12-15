@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const {li} = e.detail  
     const textElement = li.querySelector('text')
     const deleteBtn = li.querySelector('.deleteBtn')
+    const dragIcon = li.querySelector(".dragBars")
     
     // Delete item when button is clicked
     deleteBtn.addEventListener('click', ()=>{
@@ -29,8 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Edit text
     textElement.addEventListener('click', ()=>{
       editText(li)
-  })
+    })
+
+    makeItemDraggable(li);
   }
   )
 })
-

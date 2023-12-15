@@ -8,8 +8,8 @@ export function addItem(inputText, list) {
     const li = document.createElement(`li`);
     li.innerHTML = `
         <text>${inputText}</text>
+        <span class="dragBars">||| </span>
         <button class="deleteBtn">X</button>
-        <span class="dragBars">|||</span>
     `
     list.appendChild(li)
     
@@ -39,7 +39,7 @@ export function editText(li){
     // Focus the input for editing
     inputElement.focus();
 
-    // Submit editing function
+    // Submit edit
     inputElement.addEventListener('keypress', (keyEvent) => {
         if (keyEvent.key === 'Enter') {
 

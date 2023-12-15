@@ -1,5 +1,4 @@
 export function validateInput (inputText){
-    console.log(inputText)
     if (inputText) {
         return inputText
     } else (window.alert("Invalid entry"))
@@ -15,10 +14,13 @@ export function addItem(inputText, list) {
     `
     list.appendChild(li)
 
-    const editBtn = li.querySelector('.editBtn')
-    const deleteBtn = li.querySelector('.deleteBtn')
-
-    deleteBtn.addEventListener('click', ()=> {
-        li.remove()
+    const itemAdded = new CustomEvent('itemAdded', {
+        detail: {li}
     })
+    list.dispatchEvent(itemAdded)
+}
+
+// Moved deletion to its own function
+export function deleteListItem(item){
+    item.remove()
 }

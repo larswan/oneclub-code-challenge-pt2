@@ -102,13 +102,23 @@ li {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding: 3px
-}
-
-li input {
-  margin-right: auto;
+  padding: 3px;
+  cursor: grab;
+  user-select: none;
 }
 
 li:nth-child(odd) {
   background-color: #ccc;
+}
+
+li:hover {
+  background-color: #fff09133;
+}
+
+.dragging {
+  opacity: .5;
+}
+
+li input {
+  margin-right: auto;
 }

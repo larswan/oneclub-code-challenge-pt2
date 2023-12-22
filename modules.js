@@ -11,6 +11,7 @@ export function addItem(inputText, list) {
         <span class="dragBars">||| </span>
         <button class="deleteBtn">X</button>
     `
+    li.draggable = true;
     list.appendChild(li)
     
     // Trigger an event when a new li is added
@@ -50,4 +51,27 @@ export function editText(li){
             inputElement.replaceWith(newTextElement)
         }
     })
+}
+
+export function makeItemDraggable(li) {
+    li.draggable = true;
+
+    li.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', li.innerHTML);
+        li.classList.add('dragging');
+    });
+
+    li.addEventListener('dragend', () => {
+        li.classList.remove('dragging');
+    });
+}
+
+export function handleDrop(itemList, draggedItem, target) {
+    const items = Array.from(itemList.children);
+    const draggedIndex = items.indexOf(draggedItem);
+    const targetIndex = items.indexOf(target);
+
+    if (draggedIndex !== -1 && targetIndex !== -1) {
+        itemList.insertBefore(draggedItem, targetIndex > draggedIndex ? target.nextSibling : target);
+    }
 }
